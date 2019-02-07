@@ -1,0 +1,31 @@
+{
+    "name": "@spartez/eslint-config-vue",
+    "version": "1.0.0",
+    "description": "ESLint config for Vue apps",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/spartez/eslint-config-vue.git"
+    },
+    "keywords": [
+        "eslint",
+        "eslintconfig"
+    ],
+    "author": "Michał Nykiel",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/spartez/eslint-config-vue/issues"
+    },
+    "homepage": "https://github.com/spartez/eslint-config-vue#readme",
+    "peerDependencies": {
+        "eslint": "^5.3.0"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.3.0",
+        "eslint-config-airbnb-base": "^13.1.0",
+        "eslint-import-resolver-alias": "^1.1.2",
+        "eslint-plugin-import": "^2.16.0",
+        "eslint-plugin-vue": "^5.1.0"
+    }
+}
