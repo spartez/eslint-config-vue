@@ -4,11 +4,47 @@ module.exports = {
     },
     extends: ['plugin:vue/recommended', 'airbnb-base'],
     rules: {
-        'no-console': process.env.NODE_ENV === 'production' ? ['error', { allow: ['warn', 'error'] }] : 'off',
-        'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-        indent: ['error', 4],
-        'comma-dangle': ['error', 'never'],
-        'vue/html-indent': ['error', 4, { alignAttributesVertically: true }],
+        // styling
+        'max-len': [
+            'warn',
+            160,
+            4,
+            {
+                ignoreUrls: true,
+                ignoreTemplateLiterals: true
+            }
+        ],
+        indent: [
+            'error', 
+            4
+        ],
+        'comma-dangle': [
+            'error',
+            'never'
+        ],
+
+        // best practices
+        'no-console': process.env.NODE_ENV === 'production' 
+            ? [
+                'error', 
+                { 
+                    allow: ['warn', 'error'] 
+                }
+            ] 
+            : 'off',
+        'no-debugger': process.env.NODE_ENV === 'production' 
+            ? 'error' 
+            : 'off',
+        'no-param-reassign': ['error', { props: false }],
+
+        // VueJS rules
+        'vue/html-indent': [
+            'error', 
+            4, 
+            { 
+                alignAttributesVertically: true 
+            }
+        ],
         'vue/html-closing-bracket-newline': [
             'error',
             {
@@ -32,7 +68,8 @@ module.exports = {
                 baseIndent: 1,
                 switchCase: 1
             }
-        ]
+        ],
+        'vue/html-closing-bracket-spacing': 'off',
     },
     overrides: [
         {
@@ -43,11 +80,7 @@ module.exports = {
         }
     ],
     settings: {
-        'import/resolver': {
-            alias: {
-                map: [['@', './src']]
-            }
-        }
+        'import/resolver': 'webpack'
     },
     parserOptions: {
         parser: 'babel-eslint'
